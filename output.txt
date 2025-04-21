@@ -1,0 +1,2304 @@
+[DEPRECATION WARNING]: community.general.yaml has been deprecated. The plugin 
+has been superseded by the the option `result_format=yaml` in callback plugin 
+ansible.builtin.default from ansible-core 2.13 onwards. This feature will be 
+removed from community.general in version 13.0.0. Deprecation warnings can be 
+disabled by setting deprecation_warnings=False in ansible.cfg.
+ansible-playbook [core 2.18.4]
+  config file = /Users/mandersen/development/projects/mac-dev-playbook/ansible.cfg
+  configured module search path = ['/Users/mandersen/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible
+  ansible collection location = /Users/mandersen/.ansible/collections:/usr/share/ansible/collections
+  executable location = /opt/homebrew/bin/ansible-playbook
+  python version = 3.13.2 (main, Feb  4 2025, 14:51:09) [Clang 16.0.0 (clang-1600.0.26.6)] (/opt/homebrew/Cellar/ansible/11.4.0/libexec/bin/python)
+  jinja version = 3.1.6
+  libyaml = True
+Using /Users/mandersen/development/projects/mac-dev-playbook/ansible.cfg as config file
+host_list declined parsing /Users/mandersen/development/projects/mac-dev-playbook/inventory as it did not pass its verify_file() method
+script declined parsing /Users/mandersen/development/projects/mac-dev-playbook/inventory as it did not pass its verify_file() method
+auto declined parsing /Users/mandersen/development/projects/mac-dev-playbook/inventory as it did not pass its verify_file() method
+Parsed /Users/mandersen/development/projects/mac-dev-playbook/inventory inventory source with ini plugin
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+redirecting (type: modules) ansible.builtin.homebrew_tap to community.general.homebrew_tap
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+statically imported: /Users/mandersen/development/projects/mac-dev-playbook/tasks/sudoers.yml
+Read vars_file 'default.config.yml'
+statically imported: /Users/mandersen/development/projects/mac-dev-playbook/tasks/terminal.yml
+Read vars_file 'default.config.yml'
+statically imported: /Users/mandersen/development/projects/mac-dev-playbook/tasks/osx.yml
+Read vars_file 'default.config.yml'
+statically imported: /Users/mandersen/development/projects/mac-dev-playbook/tasks/extra-packages.yml
+redirecting (type: modules) ansible.builtin.composer to community.general.composer
+redirecting (type: modules) ansible.builtin.npm to community.general.npm
+redirecting (type: modules) ansible.builtin.gem to community.general.gem
+Read vars_file 'default.config.yml'
+statically imported: /Users/mandersen/development/projects/mac-dev-playbook/tasks/sublime-text.yml
+Read vars_file 'default.config.yml'
+redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: main.yml *************************************************************
+1 plays in main.yml
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+
+PLAY [Configure host.] *********************************************************
+Read vars_file 'default.config.yml'
+
+TASK [Gathering Facts] *********************************************************
+task path: /Users/mandersen/development/projects/mac-dev-playbook/main.yml:2
+[WARNING]: Platform darwin on host 127.0.0.1 is using the discovered Python
+interpreter at /opt/homebrew/bin/python3.13, but future installation of another
+Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253 `" && echo ansible-tmp-1744232917.723327-46210-153325019984253="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253 `" ) && sleep 0'
+<127.0.0.1> Attempting python interpreter discovery
+<127.0.0.1> EXEC /bin/sh -c 'echo PLATFORM; uname; echo FOUND; command -v '"'"'python3.13'"'"'; command -v '"'"'python3.12'"'"'; command -v '"'"'python3.11'"'"'; command -v '"'"'python3.10'"'"'; command -v '"'"'python3.9'"'"'; command -v '"'"'python3.8'"'"'; command -v '"'"'/usr/bin/python3'"'"'; command -v '"'"'python3'"'"'; echo ENDFOUND && sleep 0'
+<127.0.0.1> Python interpreter discovery fallback (unsupported platform for extended discovery: darwin)
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/setup.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmptbf6dtyy TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253/AnsiballZ_setup.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232917.723327-46210-153325019984253/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1]
+Read vars_file 'default.config.yml'
+
+TASK [Include playbook configuration.] *****************************************
+task path: /Users/mandersen/development/projects/mac-dev-playbook/main.yml:9
+skipping: [127.0.0.1] => changed=false 
+  skipped_reason: No items in the list
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Determine Homebrew ownership variables] *******
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:2
+ok: [127.0.0.1] => changed=false 
+  ansible_facts:
+    homebrew_group: '20'
+    homebrew_user: mandersen
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure Homebrew parent directory has correct permissions (M1).] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:8
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383 `" && echo ansible-tmp-1744232918.0691462-46248-180795401815383="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpfnrbz795 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=fipmmxxvtjeliehycxivsjjbljiegwtt] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-fipmmxxvtjeliehycxivsjjbljiegwtt ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.0691462-46248-180795401815383/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  diff:
+    after:
+      path: /opt/homebrew
+    before:
+      path: /opt/homebrew
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: null
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew
+  size: 1056
+  state: directory
+  uid: 501
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure Homebrew parent directory has correct permissions (MacOS >= 10.13).] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:19
+skipping: [127.0.0.1] => changed=false 
+  false_condition: ansible_machine == 'x86_64'
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure Homebrew parent directory has correct permissions (MacOS < 10.13).] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:27
+skipping: [127.0.0.1] => changed=false 
+  false_condition: ansible_machine == 'x86_64'
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Check if homebrew already exists.] ************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:37
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685 `" && echo ansible-tmp-1744232918.3800771-46272-90273451950685="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/stat.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmps9rqb4n2 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685/AnsiballZ_stat.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685/AnsiballZ_stat.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685/AnsiballZ_stat.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.3800771-46272-90273451950685/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  invocation:
+    module_args:
+      checksum_algorithm: sha1
+      follow: false
+      get_attributes: true
+      get_checksum: true
+      get_mime: true
+      path: /opt/homebrew/bin/brew
+  stat:
+    atime: 1744163606.5540938
+    attr_flags: ''
+    attributes: []
+    birthtime: 1743593892.8775444
+    block_size: 4096
+    blocks: 24
+    charset: us-ascii
+    checksum: 2ca9935abd5defee31cef769c2c12667b4281958
+    ctime: 1744063528.264239
+    dev: 16777231
+    device_type: 0
+    executable: true
+    exists: true
+    flags: 0
+    generation: 0
+    gid: 20
+    gr_name: staff
+    inode: 63366075
+    isblk: false
+    ischr: false
+    isdir: false
+    isfifo: false
+    isgid: false
+    islnk: false
+    isreg: true
+    issock: false
+    isuid: false
+    mimetype: text/x-shellscript
+    mode: '0755'
+    mtime: 1743593892.877594
+    nlink: 1
+    path: /opt/homebrew/bin/brew
+    pw_name: mandersen
+    readable: true
+    rgrp: true
+    roth: true
+    rusr: true
+    size: 8263
+    uid: 501
+    version: null
+    wgrp: false
+    woth: false
+    writeable: true
+    wusr: true
+    xgrp: true
+    xoth: true
+    xusr: true
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure Homebrew directory exists.] ************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:42
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519 `" && echo ansible-tmp-1744232918.539693-46293-185683065821519="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpib3nqdjc TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=gpoubcehfknsxjvwtoyjhpuvsdjsnyny] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-gpoubcehfknsxjvwtoyjhpuvsdjsnyny ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.539693-46293-185683065821519/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  diff:
+    after:
+      path: /opt/homebrew
+    before:
+      path: /opt/homebrew
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: '0775'
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew
+  size: 1056
+  state: directory
+  uid: 501
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure Homebrew is installed.] ****************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:52
+skipping: [127.0.0.1] => changed=false 
+  false_condition: not pre_installed_brew.stat.exists
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure proper permissions and ownership on homebrew_brew_bin_path dirs.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:64
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554 `" && echo ansible-tmp-1744232918.684406-46316-73574246732554="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpdsr61vym TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=tlwcmsowhuqxocbsqwijstokvoiscvox] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-tlwcmsowhuqxocbsqwijstokvoiscvox ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.684406-46316-73574246732554/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  diff:
+    after:
+      path: /opt/homebrew/bin
+    before:
+      path: /opt/homebrew/bin
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: '0775'
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/bin
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/bin
+  size: 3744
+  state: directory
+  uid: 501
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure proper ownership on homebrew_install_path subdirs.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:73
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171 `" && echo ansible-tmp-1744232918.8217459-46338-94097764268171="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpu_tqcxku TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=dmfeykrufhxwnyzwkbjiitojryuytpzn] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-dmfeykrufhxwnyzwkbjiitojryuytpzn ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232918.8217459-46338-94097764268171/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  diff:
+    after:
+      path: /opt/homebrew
+    before:
+      path: /opt/homebrew
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: false
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew
+      recurse: true
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew
+  size: 1056
+  state: directory
+  uid: 501
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Check if homebrew binary is already in place.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:84
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613 `" && echo ansible-tmp-1744232919.8784902-46361-109443954720613="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/stat.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpq12w71sf TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613/AnsiballZ_stat.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613/AnsiballZ_stat.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613/AnsiballZ_stat.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232919.8784902-46361-109443954720613/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  invocation:
+    module_args:
+      checksum_algorithm: sha1
+      follow: false
+      get_attributes: true
+      get_checksum: true
+      get_mime: true
+      path: /opt/homebrew/bin/brew
+  stat:
+    atime: 1744163606.5540938
+    attr_flags: ''
+    attributes: []
+    birthtime: 1743593892.8775444
+    block_size: 4096
+    blocks: 24
+    charset: us-ascii
+    checksum: 2ca9935abd5defee31cef769c2c12667b4281958
+    ctime: 1744063528.264239
+    dev: 16777231
+    device_type: 0
+    executable: true
+    exists: true
+    flags: 0
+    generation: 0
+    gid: 20
+    gr_name: staff
+    inode: 63366075
+    isblk: false
+    ischr: false
+    isdir: false
+    isfifo: false
+    isgid: false
+    islnk: false
+    isreg: true
+    issock: false
+    isuid: false
+    mimetype: text/x-shellscript
+    mode: '0755'
+    mtime: 1743593892.877594
+    nlink: 1
+    path: /opt/homebrew/bin/brew
+    pw_name: mandersen
+    readable: true
+    rgrp: true
+    roth: true
+    rusr: true
+    size: 8263
+    uid: 501
+    version: null
+    wgrp: false
+    woth: false
+    writeable: true
+    wusr: true
+    xgrp: true
+    xoth: true
+    xusr: true
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Symlink brew to homebrew_brew_bin_path.] ******
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:90
+skipping: [127.0.0.1] => changed=false 
+  false_condition: not homebrew_binary.stat.exists
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Add missing folder if not on Apple-chipset] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:98
+skipping: [127.0.0.1] => changed=false 
+  false_condition: ansible_machine != 'arm64'
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure proper homebrew folders are in place.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:103
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285 `" && echo ansible-tmp-1744232920.0213661-46384-79537685950285="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpwfwzf4dh TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=ysotwcerupbkcgbiuymrrqvfblkvvuen] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ysotwcerupbkcgbiuymrrqvfblkvvuen ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.0213661-46384-79537685950285/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=Cellar) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/Cellar
+    before:
+      path: /opt/homebrew/Cellar
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/Cellar
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: Cellar
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/Cellar
+  size: 1376
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256 `" && echo ansible-tmp-1744232920.147585-46384-104500320192256="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpxpfrrz6i TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=cslbbbmpruyrffopvyuihbgrlnokfyhs] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-cslbbbmpruyrffopvyuihbgrlnokfyhs ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.147585-46384-104500320192256/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=Frameworks) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/Frameworks
+    before:
+      path: /opt/homebrew/Frameworks
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/Frameworks
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: Frameworks
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/Frameworks
+  size: 96
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971 `" && echo ansible-tmp-1744232920.27366-46384-145344708433971="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpnzmht6bw TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=rbzmmrmoghucepiuhowbkernscrqhlbh] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-rbzmmrmoghucepiuhowbkernscrqhlbh ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.27366-46384-145344708433971/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=Caskroom) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/Caskroom
+    before:
+      path: /opt/homebrew/Caskroom
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/Caskroom
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: Caskroom
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/Caskroom
+  size: 992
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963 `" && echo ansible-tmp-1744232920.400693-46384-183939268323963="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpyfgl340p TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=nfsrujthjbmijipvbmnjynobbxetekhn] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-nfsrujthjbmijipvbmnjynobbxetekhn ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.400693-46384-183939268323963/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=bin) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/bin
+    before:
+      path: /opt/homebrew/bin
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/bin
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: bin
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/bin
+  size: 3744
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244 `" && echo ansible-tmp-1744232920.527605-46384-144017844429244="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp8pznd83n TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=bnrnralgjkwunjsmrhlazfdvpiouowaf] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bnrnralgjkwunjsmrhlazfdvpiouowaf ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.527605-46384-144017844429244/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=etc) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/etc
+    before:
+      path: /opt/homebrew/etc
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/etc
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: etc
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/etc
+  size: 320
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742 `" && echo ansible-tmp-1744232920.65428-46384-152511751914742="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpjxn10lb6 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=baleroepcnclxevmymvyomusvvouaorl] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-baleroepcnclxevmymvyomusvvouaorl ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.65428-46384-152511751914742/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=include) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/include
+    before:
+      path: /opt/homebrew/include
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/include
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: include
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/include
+  size: 1632
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814 `" && echo ansible-tmp-1744232920.7791538-46384-50467902468814="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp62lj1d2_ TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=jbyqfuaqkyitggyioqpfutywdlcsvcfa] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-jbyqfuaqkyitggyioqpfutywdlcsvcfa ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.7791538-46384-50467902468814/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=lib) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/lib
+    before:
+      path: /opt/homebrew/lib
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/lib
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: lib
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/lib
+  size: 3488
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424 `" && echo ansible-tmp-1744232920.905101-46384-246482528930424="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpd4q37b8b TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=mfjveiqzkzmzfyygzohcetgfbfxeptvo] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-mfjveiqzkzmzfyygzohcetgfbfxeptvo ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232920.905101-46384-246482528930424/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=opt) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/opt
+    before:
+      path: /opt/homebrew/opt
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/opt
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: opt
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/opt
+  size: 1984
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258 `" && echo ansible-tmp-1744232921.0305011-46384-77345130915258="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp0kibegvv TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=vjtzebsqwhuoowytyuhqibqpaqroggsw] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-vjtzebsqwhuoowytyuhqibqpaqroggsw ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.0305011-46384-77345130915258/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=sbin) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/sbin
+    before:
+      path: /opt/homebrew/sbin
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/sbin
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: sbin
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/sbin
+  size: 64
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542 `" && echo ansible-tmp-1744232921.156168-46384-156528724215542="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmphml2j9n6 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=ftklmlarcmiplmmsnvjjleanpddvdvug] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ftklmlarcmiplmmsnvjjleanpddvdvug ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.156168-46384-156528724215542/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=share) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/share
+    before:
+      path: /opt/homebrew/share
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/share
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: share
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/share
+  size: 640
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234 `" && echo ansible-tmp-1744232921.2826722-46384-216245911707234="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpjirg5_jx TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=rxqmaasuxajthljogfdzfjzfscsubzci] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-rxqmaasuxajthljogfdzfjzfscsubzci ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.2826722-46384-216245911707234/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=share/zsh) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/share/zsh
+    before:
+      path: /opt/homebrew/share/zsh
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/share/zsh
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: share/zsh
+  mode: '0755'
+  owner: mandersen
+  path: /opt/homebrew/share/zsh
+  size: 96
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091 `" && echo ansible-tmp-1744232921.408597-46384-173614212310091="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpf3v2twqa TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=eungchgrelqxdysnwftahkkrlmxlyftx] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-eungchgrelqxdysnwftahkkrlmxlyftx ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.408597-46384-173614212310091/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=share/zsh/site-functions) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/share/zsh/site-functions
+    before:
+      path: /opt/homebrew/share/zsh/site-functions
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/share/zsh/site-functions
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: share/zsh/site-functions
+  mode: '0755'
+  owner: mandersen
+  path: /opt/homebrew/share/zsh/site-functions
+  size: 288
+  state: directory
+  uid: 501
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225 `" && echo ansible-tmp-1744232921.5348291-46384-51210736419225="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/file.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpmwkdrzeb TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225/AnsiballZ_file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225/AnsiballZ_file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -p "[sudo via ansible, key=mxehmhsgvgasyzucxxttmjlpaguraidt] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-mxehmhsgvgasyzucxxttmjlpaguraidt ; /opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225/AnsiballZ_file.py'"'"' && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.5348291-46384-51210736419225/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=var) => changed=false 
+  ansible_loop_var: item
+  diff:
+    after:
+      path: /opt/homebrew/var
+    before:
+      path: /opt/homebrew/var
+  gid: 20
+  group: staff
+  invocation:
+    module_args:
+      _diff_peek: null
+      _original_basename: null
+      access_time: null
+      access_time_format: '%Y%m%d%H%M.%S'
+      attributes: null
+      follow: true
+      force: false
+      group: '20'
+      mode: null
+      modification_time: null
+      modification_time_format: '%Y%m%d%H%M.%S'
+      owner: mandersen
+      path: /opt/homebrew/var
+      recurse: false
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: null
+      state: directory
+      unsafe_writes: false
+  item: var
+  mode: '0775'
+  owner: mandersen
+  path: /opt/homebrew/var
+  size: 96
+  state: directory
+  uid: 501
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Collect package manager fact.] ****************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:112
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660 `" && echo ansible-tmp-1744232921.669395-46658-56268710622660="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/setup.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpk95iu2u1 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660/AnsiballZ_setup.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.669395-46658-56268710622660/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1]
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Force update brew after installation.] ********
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:122
+skipping: [127.0.0.1] => changed=false 
+  false_condition: not pre_installed_brew.stat.exists
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Where is the cache?] **************************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:126
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686 `" && echo ansible-tmp-1744232921.9041998-46692-216452103188686="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/command.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmppln2xrfk TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686/AnsiballZ_command.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686/AnsiballZ_command.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686/AnsiballZ_command.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232921.9041998-46692-216452103188686/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  cmd:
+  - /opt/homebrew/bin/brew
+  - --cache
+  delta: '0:00:00.017111'
+  end: '2025-04-09 16:08:42.057603'
+  invocation:
+    module_args:
+      _raw_params: /opt/homebrew/bin/brew --cache
+      _uses_shell: false
+      argv: null
+      chdir: null
+      creates: null
+      executable: null
+      expand_argument_vars: true
+      removes: null
+      stdin: null
+      stdin_add_newline: true
+      strip_empty_ends: true
+  msg: ''
+  rc: 0
+  start: '2025-04-09 16:08:42.040492'
+  stderr: ''
+  stderr_lines: <omitted>
+  stdout: /Users/mandersen/Library/Caches/Homebrew
+  stdout_lines: <omitted>
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure configured taps are tapped.] ***********
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:133
+skipping: [127.0.0.1] => changed=false 
+  skipped_reason: No items in the list
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure blacklisted cask applications are not installed.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:141
+skipping: [127.0.0.1] => changed=false 
+  skipped_reason: No items in the list
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Install configured cask applications.] ********
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:148
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935 `" && echo ansible-tmp-1744232922.109339-46721-265701611520935="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp60ssj3on TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232922.109339-46721-265701611520935/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=chromedriver) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - chromedriver
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: chromedriver
+  msg: 'Cask already installed: chromedriver'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525 `" && echo ansible-tmp-1744232923.135206-46721-65610275895525="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmppxy_p0sm TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232923.135206-46721-65610275895525/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=docker) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - docker
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: docker
+  msg: 'Cask already installed: docker'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723 `" && echo ansible-tmp-1744232924.1096609-46721-71749634031723="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpr6kv6uf9 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232924.1096609-46721-71749634031723/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=dropbox) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - dropbox
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: dropbox
+  msg: 'Cask already installed: dropbox'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202 `" && echo ansible-tmp-1744232925.0856252-46721-189411633196202="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp5_scn9c7 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232925.0856252-46721-189411633196202/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=firefox) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - firefox
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: firefox
+  msg: 'Cask already installed: firefox'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519 `" && echo ansible-tmp-1744232926.111816-46721-45931906352519="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpfnhc6w9_ TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232926.111816-46721-45931906352519/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=google-chrome) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - google-chrome
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: google-chrome
+  msg: 'Cask already installed: google-chrome'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269 `" && echo ansible-tmp-1744232927.099401-46721-83052130541269="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmprv_sf67j TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232927.099401-46721-83052130541269/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=sequel-ace) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - sequel-ace
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: sequel-ace
+  msg: 'Cask already installed: sequel-ace'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048 `" && echo ansible-tmp-1744232928.0736299-46721-185395772892048="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpgncunjv0 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232928.0736299-46721-185395772892048/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=slack) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - slack
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: slack
+  msg: 'Cask already installed: slack'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370 `" && echo ansible-tmp-1744232929.072164-46721-275519101564370="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpsl81rgdt TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232929.072164-46721-275519101564370/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=1password) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - 1password
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: 1password
+  msg: 'Cask already installed: 1password'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605 `" && echo ansible-tmp-1744232930.096889-46721-143257136864605="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp_shda5lu TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232930.096889-46721-143257136864605/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=1password-cli) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - 1password-cli
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: 1password-cli
+  msg: 'Cask already installed: 1password-cli'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594 `" && echo ansible-tmp-1744232931.099647-46721-39994565878594="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp_5qp024y TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232931.099647-46721-39994565878594/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=keyclu) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - keyclu
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: keyclu
+  msg: 'Cask already installed: keyclu'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489 `" && echo ansible-tmp-1744232932.1016781-46721-205649277470489="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmphqgs1w1b TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232932.1016781-46721-205649277470489/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=bettertouchtool) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - bettertouchtool
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: bettertouchtool
+  msg: 'Cask already installed: bettertouchtool'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842 `" && echo ansible-tmp-1744232933.106642-46721-268335846591842="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpr38uguvm TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232933.106642-46721-268335846591842/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=menumeters) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - menumeters
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: menumeters
+  msg: 'Cask already installed: menumeters'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348 `" && echo ansible-tmp-1744232934.189672-46721-183745225005348="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpxgaucheg TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232934.189672-46721-183745225005348/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=marta) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - marta
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: marta
+  msg: 'Cask already installed: marta'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180 `" && echo ansible-tmp-1744232935.419094-46721-123743965464180="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpq7mqkd2a TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232935.419094-46721-123743965464180/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=daisydisk) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - daisydisk
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: daisydisk
+  msg: 'Cask already installed: daisydisk'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873 `" && echo ansible-tmp-1744232936.400346-46721-152549531564873="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpyb3d6pb5 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232936.400346-46721-152549531564873/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=easyfind) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - easyfind
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: easyfind
+  msg: 'Cask already installed: easyfind'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254 `" && echo ansible-tmp-1744232937.56979-46721-120198856113254="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp462565rt TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232937.56979-46721-120198856113254/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=iina) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - iina
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: iina
+  msg: 'Cask already installed: iina'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047 `" && echo ansible-tmp-1744232938.530729-46721-133639824725047="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpsdtdflnb TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232938.530729-46721-133639824725047/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=jordanbaird-ice) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - jordanbaird-ice
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: jordanbaird-ice
+  msg: 'Cask already installed: jordanbaird-ice'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256 `" && echo ansible-tmp-1744232939.600493-46721-42072003023256="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpat3ttbw3 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232939.600493-46721-42072003023256/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=stats) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - stats
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: stats
+  msg: 'Cask already installed: stats'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569 `" && echo ansible-tmp-1744232940.640696-46721-222273554405569="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpfrtt7901 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232940.640696-46721-222273554405569/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=box-drive) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - box-drive
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: box-drive
+  msg: 'Cask already installed: box-drive'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196 `" && echo ansible-tmp-1744232941.870755-46721-48474508675196="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmphecuwo2l TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232941.870755-46721-48474508675196/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=box-tools) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - box-tools
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: box-tools
+  msg: 'Cask already installed: box-tools'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742 `" && echo ansible-tmp-1744232942.872318-46721-54963415781742="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpbmq567t7 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232942.872318-46721-54963415781742/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=brave-browser) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - brave-browser
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: brave-browser
+  msg: 'Cask already installed: brave-browser'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039 `" && echo ansible-tmp-1744232943.884981-46721-75315754051039="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpw_kgh_va TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232943.884981-46721-75315754051039/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=evernote) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - evernote
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: evernote
+  msg: 'Cask already installed: evernote'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895 `" && echo ansible-tmp-1744232944.886796-46721-71040185055895="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpcimxqhrs TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232944.886796-46721-71040185055895/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=iexplorer) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - iexplorer
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: iexplorer
+  msg: 'Cask already installed: iexplorer'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023 `" && echo ansible-tmp-1744232945.8922958-46721-90105985735023="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp9n4_anmu TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232945.8922958-46721-90105985735023/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=sonos) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - sonos
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: sonos
+  msg: 'Cask already installed: sonos'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448 `" && echo ansible-tmp-1744232946.866888-46721-113714517967448="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp0b4acvi3 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232946.866888-46721-113714517967448/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=spotify) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - spotify
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: spotify
+  msg: 'Cask already installed: spotify'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640 `" && echo ansible-tmp-1744232947.884148-46721-78375851623640="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpf524z1mf TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232947.884148-46721-78375851623640/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=visual-studio-code) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - visual-studio-code
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: visual-studio-code
+  msg: 'Cask already installed: visual-studio-code'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390 `" && echo ansible-tmp-1744232948.898465-46721-226391638344390="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp4ujkltm_ TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232948.898465-46721-226391638344390/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=iterm2) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - iterm2
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: iterm2
+  msg: 'Cask already installed: iterm2'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004 `" && echo ansible-tmp-1744232950.155967-46721-274408853061004="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp54h1lqox TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232950.155967-46721-274408853061004/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=onedrive) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - onedrive
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: onedrive
+  msg: 'Cask already installed: onedrive'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753 `" && echo ansible-tmp-1744232951.3766148-46721-213681978738753="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew_cask to community.general.homebrew_cask
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew_cask.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmplr31mci2 TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753/AnsiballZ_homebrew_cask.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753/AnsiballZ_homebrew_cask.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232951.3766148-46721-213681978738753/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=git-credential-manager) => changed=false 
+  ansible_loop_var: item
+  invocation:
+    module_args:
+      accept_external_apps: false
+      greedy: false
+      install_options:
+      - appdir=/Applications
+      name:
+      - git-credential-manager
+      path: /usr/local/bin:/opt/homebrew/bin
+      state: present
+      sudo_password: null
+      update_homebrew: false
+      upgrade_all: false
+  item: git-credential-manager
+  msg: 'Cask already installed: git-credential-manager'
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure blacklisted homebrew packages are not installed.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:160
+skipping: [127.0.0.1] => changed=false 
+  skipped_reason: No items in the list
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Ensure configured homebrew packages are installed.] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:166
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166 `" && echo ansible-tmp-1744232952.4980822-54676-98033530971166="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmps6ejdowr TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232952.4980822-54676-98033530971166/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=bash-completion) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - bash-completion
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: bash-completion
+  msg: 'Package already installed: bash-completion'
+  unchanged_pkgs:
+  - bash-completion
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646 `" && echo ansible-tmp-1744232953.5220811-54676-226534065463646="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp8ac10h8o TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232953.5220811-54676-226534065463646/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=git) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - git
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: git
+  msg: 'Package already installed: git'
+  unchanged_pkgs:
+  - git
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265 `" && echo ansible-tmp-1744232954.4610639-54676-271216328599265="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmph9zqovis TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232954.4610639-54676-271216328599265/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=gh) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - gh
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: gh
+  msg: 'Package already installed: gh'
+  unchanged_pkgs:
+  - gh
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389 `" && echo ansible-tmp-1744232955.697503-54676-23941467264389="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpcgmr8q4g TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232955.697503-54676-23941467264389/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=go) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - go
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: go
+  msg: 'Package already installed: go'
+  unchanged_pkgs:
+  - go
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823 `" && echo ansible-tmp-1744232956.642101-54676-97338429138823="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp82fnve6r TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232956.642101-54676-97338429138823/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=nmap) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - nmap
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: nmap
+  msg: 'Package already installed: nmap'
+  unchanged_pkgs:
+  - nmap
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766 `" && echo ansible-tmp-1744232957.849886-54676-215752470995766="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpqc7evtyb TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232957.849886-54676-215752470995766/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=node) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - node
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: node
+  msg: 'Package already installed: node'
+  unchanged_pkgs:
+  - node
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147 `" && echo ansible-tmp-1744232958.793782-54676-277946700306147="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp5n6euv7f TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232958.793782-54676-277946700306147/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=nvm) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - nvm
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: nvm
+  msg: 'Package already installed: nvm'
+  unchanged_pkgs:
+  - nvm
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497 `" && echo ansible-tmp-1744232959.735355-54676-40574669947497="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp8u_5snga TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232959.735355-54676-40574669947497/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=pv) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - pv
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: pv
+  msg: 'Package already installed: pv'
+  unchanged_pkgs:
+  - pv
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967 `" && echo ansible-tmp-1744232960.891219-54676-179746018346967="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpmhcq_zxb TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232960.891219-54676-179746018346967/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=wget) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - wget
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: wget
+  msg: 'Package already installed: wget'
+  unchanged_pkgs:
+  - wget
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265 `" && echo ansible-tmp-1744232961.838331-54676-92991459997265="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmp1cnrybik TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232961.838331-54676-92991459997265/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=zsh-history-substring-search) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - zsh-history-substring-search
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: zsh-history-substring-search
+  msg: 'Package already installed: zsh-history-substring-search'
+  unchanged_pkgs:
+  - zsh-history-substring-search
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743 `" && echo ansible-tmp-1744232962.807125-54676-273616310662743="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpzuts039j TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232962.807125-54676-273616310662743/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => (item=teamookla/speedtest/speedtest) => changed=false 
+  ansible_loop_var: item
+  changed_pkgs: []
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - teamookla/speedtest/speedtest
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: teamookla/speedtest/speedtest
+  msg: 'Package already installed: teamookla/speedtest/speedtest'
+  unchanged_pkgs:
+  - teamookla/speedtest/speedtest
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376 `" && echo ansible-tmp-1744232963.891148-54676-17271094800376="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmpvg5v0rwv TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232963.891148-54676-17271094800376/ > /dev/null 2>&1 && sleep 0'
+changed: [127.0.0.1] => (item=mas) => changed=true 
+  ansible_loop_var: item
+  changed_pkgs:
+  - mas
+  invocation:
+    module_args:
+      force_formula: false
+      install_options: []
+      name:
+      - mas
+      path: /opt/homebrew/bin
+      state: present
+      update_homebrew: false
+      upgrade_all: false
+      upgrade_options: []
+  item: mas
+  msg: 'Package installed: mas'
+  unchanged_pkgs: []
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Notification for handler Clear homebrew cache has been saved.
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Upgrade all homebrew packages (if configured).] ***
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:176
+skipping: [127.0.0.1] => changed=false 
+  false_condition: homebrew_upgrade_all_packages
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Check for Brewfile.] **************************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:184
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: mandersen
+<127.0.0.1> EXEC /bin/sh -c 'echo ~mandersen && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/mandersen/.ansible/tmp `"&& mkdir "` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483 `" && echo ansible-tmp-1744232967.7155771-57971-13753121569483="` echo /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483 `" ) && sleep 0'
+Using module file /opt/homebrew/Cellar/ansible/11.4.0/libexec/lib/python3.13/site-packages/ansible/modules/stat.py
+<127.0.0.1> PUT /Users/mandersen/.ansible/tmp/ansible-local-46207o42jqg38/tmprkninbqt TO /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483/AnsiballZ_stat.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483/ /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483/AnsiballZ_stat.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/opt/homebrew/bin/python3.13 /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483/AnsiballZ_stat.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/mandersen/.ansible/tmp/ansible-tmp-1744232967.7155771-57971-13753121569483/ > /dev/null 2>&1 && sleep 0'
+ok: [127.0.0.1] => changed=false 
+  invocation:
+    module_args:
+      checksum_algorithm: sha1
+      follow: false
+      get_attributes: true
+      get_checksum: true
+      get_mime: true
+      path: /Users/mandersen/Brewfile
+  stat:
+    exists: false
+Read vars_file 'default.config.yml'
+
+TASK [geerlingguy.mac.homebrew : Install from Brewfile.] ***********************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/tasks/main.yml:190
+skipping: [127.0.0.1] => changed=false 
+  false_condition: homebrew_brewfile.stat.exists and homebrew_use_brewfile
+  skip_reason: Conditional result was False
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+Read vars_file 'default.config.yml'
+NOTIFIED HANDLER geerlingguy.mac.homebrew : Clear homebrew cache for 127.0.0.1
+Read vars_file 'default.config.yml'
+
+RUNNING HANDLER [geerlingguy.mac.homebrew : Clear homebrew cache] **************
+task path: /Users/mandersen/.ansible/collections/ansible_collections/geerlingguy/mac/roles/homebrew/handlers/main.yml:4
+skipping: [127.0.0.1] => changed=false 
+  false_condition: homebrew_clear_cache | bool
+  skip_reason: Conditional result was False
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=14   changed=1    unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
+
