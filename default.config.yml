@@ -1,0 +1,203 @@
+---
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove: 
+ - Launchpad
+ - TV
+ - Podcasts
+ - 'App Store'
+ - Music
+ - Notes
+ - Safari
+ - Reminders
+ - Maps
+ - iPhone Mirroring
+ - Messages
+
+dockitems_persist: []
+# don't persist anything.
+# - name: "Sublime Text"
+#   path: "/Applications/Sublime Text.app/"
+#   pos: 5
+
+configure_sudoers: true
+sudoers_custom_config: ""
+# Example:
+sudoers_custom_config: |
+   # Allow users in admin group to use sudo with no password.
+   %admin ALL=(ALL) NOPASSWD: ALL
+
+# dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+# dotfiles_repo_accept_hostkey: true
+# dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+# dotfiles_repo_version: master # Replace with your default branch
+# dotfiles_files:
+#   - .zshrc
+#   - .gitignore
+#   - .inputrc
+#   - .osx
+#   - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - openssl
+  - bash-completion
+  - git
+  - gh
+  - go
+  - nmap
+  - node
+  - nvm
+  - pv
+  - wget
+  - zsh-history-substring-search
+  - teamookla/speedtest/speedtest
+  - mas
+  - yt-dlp
+  - ffmpeg
+  - bottom
+  - tree
+  - stow
+  - fzf
+  - eza
+  - openjdk
+  - neovim
+
+
+homebrew_taps: []
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - chromedriver
+  - docker
+  - dropbox
+  - firefox
+  - google-chrome
+  - google-drive
+  # - licecap
+  - slack
+  - discord
+  - 1password
+  - 1password-cli
+#  - keycue
+  - keyclu
+  - bettertouchtool
+  - menumeters
+  - marta
+  - daisydisk
+  - easyfind
+  - iina
+  - jordanbaird-ice
+  - stats
+  - box-drive
+  - box-tools
+  - brave-browser
+  - evernote
+  - iexplorer
+  - sonos
+  - spotify
+  - visual-studio-code
+  - iterm2
+  - git-credential-manager
+  - raycast
+  - synology-drive
+  - snagit
+  - powerphotos
+  - adobe-acrobat-reader
+  - utm
+  - microsoft-office
+  - microsoft-edge
+  - microsoft-teams
+  - keycombiner
+  - only-switch
+  - automounterhelper
+  - hyperkey
+  - paletro
+  - proxyman
+  - blip
+  - virtualbox
+  - macdown
+  - the-unarchiver
+  - onyX
+  - wireshark
+  - zoom
+  - logi-options+
+  - calibre
+  - arc
+  - popclip
+  - shottr
+  - alt-tab
+  - warp
+  - github
+  
+#things to add
+
+
+
+
+
+
+
+# See `geerlingguy.mac.mas` role documentation for usage instructions.
+mas_installed_apps: 
+  - { id: 472226235, name: "LanScan" }
+  - { id: 1569813296, name: "1Password for Safari" }
+  - { id: 1481669779, name: "Evernote Web Clipper" }
+  - { id: 1295203466, name: "Windows App" }
+  - { id: 682658836, name: "GarageBand" }
+  - { id: 1558360383, name: "Menu Bar Calendar" }
+  - { id: 1544620654, name: "Clipboard Manager -- Pasty" }
+  - { id: 1436994560, name: "Portal Escape Into Nature" }
+  - { id: 1221250572, name: "xnip screenshot annotation" }
+  - { id: 1502839586, name: "hand mirror" }
+  - { id: 494803304, name: "wifi explorer scanner" }
+  - { id: 1160435653, name: "AutoMounter" }
+  - { id: 425264550, name: "Blackmagic Disk Speed Test" }
+  - { id: 1561788435, name: "Usage - Device Monitor" }
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# # Set to 'true' to configure Sublime Text.
+# configure_sublime: false
+# sublime_base_path: "~/Library/Application Support/Sublime Text"
+# sublime_config_path: "Packages/User"
+# sublime_package_control:
+#   - "DocBlockr"
+#   - "Dockerfile Syntax Highlighting"
+#   - "FileDiffs"
+#   - "GitHub Flavored Markdown Preview"
+#   - "Jinja2"
+#   - "Package Control"
+#   - "Pretty JSON"
+#   - "SublimeLinter"
+#   - "SublimeLinter-contrib-yamllint"
+#   - "Theme - Cobalt2"
+#   - "TrailingSpaces"
+#   - "WordingStatus"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
