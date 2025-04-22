@@ -11,7 +11,15 @@ Upgrade Pip: sudo pip3 install --upgrade pip
 Install Ansible: pip3 install ansible
 
 3. Clone or download this repository to your local drive.
+
+create a config.yml in the project root and put the variables in it.   
+
+mas_email:"$email"
+
+mas_password:"$password"
+
 Run ansible-galaxy install -r requirements.yml inside this directory to install required Ansible roles.
+
 Run ansible-playbook main.yml -K  inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
 
 Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run brew doctor to see if this is the case.
