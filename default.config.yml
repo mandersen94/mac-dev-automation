@@ -163,8 +163,8 @@ mas_installed_apps:
 #https://apps.apple.com/us/app/blackmagic-disk-speed-test/id425264550?mt=12
 #https://apps.apple.com/us/app/automounter/id1160435653?mt=12
 
-mas_email: "mark@markandersen.org"
-mas_password: "John94Galt94!!"
+mas_email: 
+mas_password: 
 
 osx_script: "~/.osx --no-restart"
 
