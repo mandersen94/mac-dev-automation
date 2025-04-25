@@ -72,50 +72,52 @@ homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - raycast
+  - brave-browser
   - chromedriver
   - docker
   - dropbox
   - firefox
   - google-chrome
+  - arc
+  - microsoft-edge
   - google-drive
-  # - licecap
   - slack
-  - discord
-  - 1password
-  - 1password-cli
-#  - keycue
-  - keyclu
-  - bettertouchtool
-  - menumeters
-  - marta
-  - daisydisk
-  - easyfind
-  - iina
-  - jordanbaird-ice
-  - stats
   - box-drive
   - box-tools
-  - brave-browser
+  - 1password
+  - 1password-cli
   - evernote
   - iexplorer
   - sonos
   - spotify
   - visual-studio-code
   - iterm2
-  - git-credential-manager
-  - raycast
   - synology-drive
   - snagit
+  - microsoft-office
+  - automounterhelper
+  - zoom
+  - logi-options+
+  - hyperkey
+  - github
+######
+  - discord
+  - keyclu
+  - bettertouchtool
+  - marta
+  - daisydisk
+  - easyfind
+  - iina
+  - jordanbaird-ice
+  - stats
+  - git-credential-manager
   - powerphotos
   - adobe-acrobat-reader
   - utm
-  - microsoft-office
-  - microsoft-edge
   - microsoft-teams
   - keycombiner
   - only-switch
-  - automounterhelper
-  - hyperkey
   - paletro
   - proxyman
   - blip
@@ -124,15 +126,12 @@ homebrew_cask_apps:
   - the-unarchiver
   - onyX
   - wireshark
-  - zoom
-  - logi-options+
   - calibre
-  - arc
   - popclip
   - shottr
   - alt-tab
   - warp
-  - github
+#  - keycue
   
 #things to add
 
