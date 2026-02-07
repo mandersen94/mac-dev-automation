@@ -66,9 +66,11 @@ homebrew_installed_packages:
   - eza
   - openjdk
   - neovim
+  - yarn
+  - yqrashawn/goku/goku
 
 
-homebrew_taps: []
+homebrew_taps: [yqrashawn/goku]
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -79,7 +81,6 @@ homebrew_cask_apps:
   - dropbox
   - firefox
   - google-chrome
-  - arc
   - microsoft-edge
   - google-drive
   - slack
@@ -98,18 +99,19 @@ homebrew_cask_apps:
   - microsoft-office
   - automounterhelper
   - zoom
-  - logi-options+
-  - hyperkey
+#  - logi-options+
+#  - hyperkey
   - github
+  - rectangle
 ######
-  - discord
-  - keyclu
   - bettertouchtool
   - marta
   - daisydisk
   - easyfind
   - iina
   - jordanbaird-ice
+ # - superkey
+ # - leader-key
   - stats
   - git-credential-manager
   - powerphotos
@@ -117,8 +119,7 @@ homebrew_cask_apps:
   - utm
   - microsoft-teams
   - keycombiner
-  - only-switch
-  - paletro
+  - paletro  #brings up a command palette for apps
   - proxyman
   - blip
   - virtualbox
@@ -126,19 +127,20 @@ homebrew_cask_apps:
   - the-unarchiver
   - onyX
   - wireshark
-  - calibre
   - popclip
   - shottr
   - alt-tab
-  - warp
-#  - keycue
-  
+  - alfred
+  - karabiner-elements
+  - homerow
+  - mouseless
+  - keyboard-maestro
+  - menuwhere
+  - keycastr
+  - scoot
+
+
 #things to add
-
-
-
-
-
 
 
 # See `geerlingguy.mac.mas` role documentation for usage instructions.
@@ -157,6 +159,7 @@ mas_installed_apps:
   - { id: 1160435653, name: "AutoMounter" }
   - { id: 425264550, name: "Blackmagic Disk Speed Test" }
   - { id: 1561788435, name: "Usage - Device Monitor" }
+  - { id: 1153157709, name: "SpeedTest By Ookla" }
 
 osx_script: "~/.osx --no-restart"
 
